@@ -184,3 +184,19 @@ def is_invalid_name(name):
         regexp = re.compile(r'^[a-zA-Z0-9!@#$%^~*_-]*$')
         if not regexp.search(name):
             return True
+
+
+def get_time_minutes(time, time_unit):
+    """Convert the given time to minutes"""
+
+    if time is not None and time > 0:
+        if time_unit in ('Hour'):
+            return time * 60
+        elif time_unit in ('Day'):
+            return time * 60 * 24
+        elif time_unit in ('Week'):
+            return time * 60 * 24 * 7
+        else:
+            return time
+    else:
+        return 0

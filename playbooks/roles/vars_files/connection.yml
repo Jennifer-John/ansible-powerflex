@@ -1,0 +1,7 @@
+# common params
+hostname: 10.225.2.169
+username: 'admin'
+password: 'Password123!'
+validate_certs: False
+port: 443
+timeout: 120
